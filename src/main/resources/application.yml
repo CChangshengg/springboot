@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: demo3
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/schema_name_2
+    username: root
+    password: 1028
+  #cession失效时间
+  cession:
+    timeout: 86400
+server:
+  port: 8080
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false # 驼峰命名,不安会自动转换
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted # 全局逻辑删除的实体字段名
+      logic-delete-value: 1 # 逻辑已删除值
+      logic-not-delete-value: 0 # 逻辑未删除值
